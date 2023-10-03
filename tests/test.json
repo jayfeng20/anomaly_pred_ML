@@ -1,0 +1,14 @@
+{"deviceId": 4422, "cycle_ids": [
+{"cycleId": 12433368.0, "starttime": 0, "endtime": 10, "duration": 10, "type": "PREVAC"}, 
+{"cycleId": 12465041.0, "starttime": 20, "endtime": 30, "duration": 10, "type": "PREVAC"}, 
+{"cycleId": 12465175.0, "starttime": 40, "endtime": 50, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 60, "endtime": 70, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 80, "endtime": 90, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 100, "endtime": 110, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 120, "endtime": 130, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 140, "endtime": 150, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 160, "endtime": 170, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 180, "endtime": 190, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 200, "endtime": 210, "duration": 10, "type": "PREVAC"},
+{"cycleId": 12465175.0, "starttime": 220, "endtime": 230, "duration": 10, "type": "PREVAC"}
+]}

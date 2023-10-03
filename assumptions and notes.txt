@@ -1,0 +1,35 @@
+1. Data preprocess:
+    Labeled 10 cycles before each FSR Required alarm as 1 and the rest 0, regardless of cycle type.
+
+    Assumptions: 
+        1. all cycles would reflect the leading up of an alarm before an alarm happens
+
+2. Features:
+    Cycle metadata -> count: 2
+        cycle duration, numerical
+        cycle type, categorical
+    Digital -> count: number of sensors * 4
+        number of activations for each sensor, numerical
+        starting status for each sensor 0/1
+        ending status for each sensor 0/1
+        relative time of first activation for each sensor, numerical
+    Analog -> count: number of channels * 2
+        number of strict local minima for each channel, numerical
+        number of strict local maxima for each channel, numerical
+    
+    Reasons and Assumptions:
+        1. Number of digital activations is clearly crucial
+        2. Starting and ending status of digitals capture whether a sensor is started or left 
+        on or off outside of a cycle
+        3. Relative first activation time can capture overall left and right shifting of plot 
+        4. As we have discussed, most changes in analog readings are a reflection of a digital 
+        status change, however, small fluctuations could foretell potential failures so after 
+        observing the data, I noticed majority of the data is smooth, meaning no fluctuations, 
+        so I chose strict < and > relationships to capture the number of peaks and pits 
+        in a channel during a cycle. The algorithm also takes into account plateaus and basins
+        e.g. [1,1,2,2,2,1,1] would be considered as having 1 peak and [3,2,1,1,1,2,3] would be 
+        considered as having 1 pit
+        
+3. Target/label:
+    FSR Required or not, 1/0
+
